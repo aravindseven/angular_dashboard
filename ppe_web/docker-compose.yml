@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  servicedev:
+    image: "forklift:dev"
+
+    # Expose ports [HOST:CONTAINER}
+    ports:
+      - "5060:5060"
+ 

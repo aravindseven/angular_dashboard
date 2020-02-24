@@ -1,0 +1,31 @@
+<header class="bg-white header-box-shadow fixed-top text-center">
+  <h1 class="navbar-brand fw-500 mb-0 py-3">Pole Images</h1>
+</header>
+
+<div class="clearfix pt-5">
+<div class="container pt-5"> 
+  <div class="card mb-3">
+      <div class="row">
+        <div class="col-md-3 mb-2" *ngIf="backDefault">
+            <button class="folders" (click)="backToDefault('default')">Default</button>
+        </div>
+        <div class="col-md-3 mb-2" *ngFor="let foldername of folderArray">
+            <button class="folders" (click)="folderchange(foldername)">{{foldername}}</button>
+        </div>
+      </div>
+      <div class="row">
+          <div class="abc text-center " [ngClass]="{ 'active': video.active }" 
+          (click)="onSelect(video)" *ngFor="let video of videos | paginate: { itemsPerPage: 9, currentPage: p }">
+          <div class="imagealign">
+              <img class="imagedisplay"  src="http://127.0.0.1:5004/{{video.filepath}}"/>
+              <p class="name">{{video.filename}}</p>
+          </div>
+            
+          </div>
+        </div>
+        <div class="row">
+          <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+        </div>
+  </div>
+</div>
+</div>

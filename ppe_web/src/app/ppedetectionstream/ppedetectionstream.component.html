@@ -1,0 +1,31 @@
+<header class="bg-white header-box-shadow fixed-top text-center">
+  <h1 class="navbar-brand fw-500 mb-0 py-3">PPE Video Stream</h1>
+  <button class="livebutton" id="modify" (click)="backpages(1)">Back To Live</button>
+  <button class="livebutton1" id="modify" (click)="backpages(2)">Back To Videos</button>
+</header>
+
+<div class="clearfix pt-5"></div>
+<div class="container pt-5"> 
+  <div class="card mb-3">
+   <div class="videoclass" id="app">
+      <div class="row">
+          <div class="col-md-3">
+              <label for="lfname">Person Threshold :</label> 
+              <input type="text" class="form-control" [(ngModel)]="personthreshold">
+          </div>
+          <div class="col-md-3">
+              <label for="lfname">PPE Threshold :</label> 
+              <input type="text" class="form-control" [(ngModel)]="ppethreshold">
+          </div>
+          <div class="col-md-3 threshbutton" >
+              <button class="stop" id="modify" (click)="restartStream()">Restart Stream</button>
+          </div>
+      </div>
+      <img class="canvas" [src]="imagePath" width="950" height="530">
+    </div> 
+      
+  </div>
+</div>
+
+
+
