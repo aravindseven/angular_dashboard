@@ -26,7 +26,7 @@
     "core-js": "^2.5.4",
     "dropbox": "^4.0.28",
     "es6-promise": "^4.2.8",
-    "highcharts": "^4.2.7",
+    "highcharts": "^8.2.0",
     "isomorphic-fetch": "^2.2.1",
     "iv-viewer": "^2.0.1",
     "lodash": "^4.17.11",
